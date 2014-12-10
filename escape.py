@@ -38,6 +38,7 @@ color_dark_ground = libtcod.Color(50, 50, 150)
 color_light_wall = libtcod.Color(130, 110, 50)
 color_light_ground = libtcod.Color(200, 180, 50)
 
+# Classes for Escape
 class Rect:
     # a rectangle on the map. Used to characterize a room.
     def __init__(self, x, y, w, h):
@@ -199,6 +200,7 @@ class Item:
             if self.use_function != 'cancelled':
                 inventory.remove(self.owner) # Destroy after use unless it was cancelled for some reason
 
+# Escape functions
 def cast_heal():
     # Heal the player
     if player.fighter.hp == player.fighter.max_hp:
