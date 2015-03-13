@@ -199,6 +199,7 @@ class Item:
         else:
             if self.use_function != 'cancelled':
                 inventory.remove(self.owner) # Destroy after use unless it was cancelled for some reason
+                cast_heal()
 
 # Escape functions
 def cast_heal():
